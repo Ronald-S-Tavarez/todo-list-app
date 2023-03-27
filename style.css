@@ -1,0 +1,167 @@
+:root {
+    --color-midground: rgb(120, 125, 130);
+    --color-background: rgb(156, 161, 167);
+    --color-foreground: rgb(214, 221, 227);
+    --color-accent: rgb(36, 122, 203);
+    --color-accent-dark: rgb(29, 96, 160);
+    --text-accent: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background);
+    padding: 20px;
+    min-height: 0;
+}
+
+.container {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+header > a > img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+main > hr {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+
+#todo-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+#todo-form > fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: var(--color-foreground);
+}
+
+#todo-form > fieldset > legend {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: var(--color-accent);
+    color: var(--text-accent);
+}
+
+input[type="text"] {
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#todo-form-add-button {
+    background-color: var(--color-accent);
+    color: var(--text-accent);
+    border: 1px solid black;
+    padding: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#todo-form-add-button:hover, .todo-bottom > button:hover {
+    cursor: pointer;
+    background-color: var(--color-accent-dark);
+}
+
+#todo-list {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid black;
+    padding: 20px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    overflow: auto;
+    background-color: var(--color-midground);
+}
+
+.todo {
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--color-foreground);
+}
+
+.todo-top {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.todo-top > h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.todo-meta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.todo-body {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.todo-body > p {
+    margin: 5px;
+}
+
+.todo-bottom {
+    width: 100%;
+}
+
+.todo-bottom > button {
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: var(--color-accent);
+    color: var(--text-accent);
+}
